@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- CalendarView -->
+    <CalendarView
+        android:id="@+id/calendarViewEvent"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView for displaying the selected date -->
+    <TextView
+        android:id="@+id/textViewCurrentDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Selected Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendarViewEvent" />
+
+    <!-- EditText for event title input -->
+    <EditText
+        android:id="@+id/editTextEventTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewCurrentDate" />
+
+    <!-- EditText for event amount input -->
+    <EditText
+        android:id="@+id/editTextEventAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEventTitle" />
+
+    <!-- EditText for event details -->
+    <EditText
+        android:id="@+id/editTextEventDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:hint="Details"
+        android:inputType="textMultiLine"
+        android:maxHeight="200dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonSaveEvent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEventAmount" />
+
+    <!-- Buttons at the bottom -->
+    <!-- Edit Button -->
+    <Button
+        android:id="@+id/buttonSaveEvent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDeleteEvent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/buttonDeleteEvent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonBackEvent"
+        app:layout_constraintStart_toEndOf="@id/buttonSaveEvent" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/buttonBackEvent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonDeleteEvent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

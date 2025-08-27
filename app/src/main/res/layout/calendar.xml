@@ -1,0 +1,67 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <!-- TextView for Deadlines -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:background="#19EAD9"
+        android:gravity="top"
+        android:text="Deadlines"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- CalendarView -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="0dp"
+        android:layout_height="324dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <!-- TextView 2 -->
+    <TextView
+        android:id="@+id/currentdate"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+    <!-- ListView with Adjusted Width -->
+    <ListView
+        android:id="@+id/eventsListView"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addEventButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentdate" />
+
+    <!-- Button Adjusted to Appear Next to the ListView -->
+    <Button
+        android:id="@+id/addEventButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/eventsListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eventsListView"
+        app:layout_constraintTop_toTopOf="@+id/eventsListView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
